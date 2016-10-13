@@ -2,6 +2,7 @@
 Here is my CV
 
 Hi, 
+
   I am Cir and I am going to become the master in FullStack Development. What is FullStack Development ? Ok, for me it is 
 AngularJS and Node.JS. I agree if you say that I am wrong, but now I am not talking about HTML or CSS and additional and 
 helpful tools. I am about FRONTEND & BACKEND part of web development. There are many other toolkits for web, but I find 
