@@ -1,4 +1,3 @@
-# CV is outdated
 # Here is my Motivation Letter
 
 Hi, 
