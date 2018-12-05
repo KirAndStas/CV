@@ -1,0 +1,21 @@
+{
+    parser :  babel-eslint ,
+    extends :  airbnb ,
+    rules : {
+    indent : [error, 4, {ignoredNodes : [ JSXAttribute, JSXSpreadAttribute]}],
+    react/jsx-indent : 0,
+    no-undef : 1,
+    jsx-a11y/alt-text: 0,
+    jsx-quotes : [ error ,  prefer-single ],
+    no-unused-vars : 0,
+    prefer-template: 1,
+    react/button-has-type: 0,
+    react/jsx-no-comment-textnodes: 0,
+    react/jsx-indent-props: [error, first],
+    react/jsx-first-prop-new-line: [error, never],
+    react/jsx-closing-bracket-location : [<enabled>, {
+        selfClosing :  after-props
+    }],
+    max-len : [1, 120, 2, {ignoreComments: true}]
+    }
+}
