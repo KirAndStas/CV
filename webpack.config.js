@@ -1,17 +1,19 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/main.jsx',
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'dist/builds'),
         filename: '[name].[chunkhash:8].js'
     },
     devServer: {
-        contentBase: path.resolve(__dirname, 'build'),
+        contentBase: path.resolve(__dirname, 'dist/builds'),
         port: 8000
     },
     plugins: [
+        new CleanWebpackPlugin('dist/builds/*', {}),
         new HtmlWebpackPlugin({
           title: 'vesground.info',
           template: path.resolve(__dirname, 'config/index.html.sample'),
@@ -26,7 +28,6 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.less']
     },
-    watch: true,
     module: {
         rules: [
             {
