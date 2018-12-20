@@ -5,10 +5,14 @@
   "main": "webpack.js",
   "scripts": {
     "start:dev": "webpack-dev-server",
-    "start:prod": "",
-    "start:build": "webpack",
-    "start:server": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:prod": "pm2 start server.js --name me-info",
+    "stop": "pm2 stop all",
+    "delete": "pm2 delete all",
+    "restart": "pm2 restart all",
+    "list": "pm2 list",
+    "logs": "pm2 logs",
+    "build": "webpack",
+    "start:server": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -56,8 +60,10 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "clean-webpack-plugin": "^1.0.0",
     "express": "^4.16.4",
     "moment": "^2.22.2",
+    "pm2": "^3.2.4",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
