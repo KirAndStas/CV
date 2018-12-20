@@ -38,8 +38,8 @@ export default class Header extends React.Component {
     onCVLinkClick() {
         const typedKeyword = window.prompt('type your keyword here');
 
-        if (typedKeyword && typedKeyword === 'keyword') {
-            const win = window.open('https://www.the-village.com.ua/', '_blank'); // eslint-disable-line
+        if (typedKeyword && typedKeyword === 'kiril + genesis') {
+            const win = window.open('http://localhost:9000/statics/cv_kiril_stas.pdf', '_blank'); // eslint-disable-line
             win.focus();
         } else if (typeof typedKeyword === 'string' && typedKeyword !== 'keyword') {
             const error = window.confirm('Your keyword is wrong. Click OK, to try again.');
