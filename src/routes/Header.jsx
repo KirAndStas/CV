@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import { assetsUrl, secret } from 'config/config.json'; // eslint-disable-line
+import { assetsUrl, secret } from 'config/config.json';
 // import Tip from 'src/components/Tip';
 
 export default class Header extends React.Component {
