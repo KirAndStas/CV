@@ -1,6 +1,6 @@
-
-var host = "localhost";
-var port = 9000;
+var config = require('./config/config.json');
+var host = config.host;
+var port = config.port;
 var express = require("express");
 
 var app = express();

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-import './Tip.less';
+import 'src/components/Tip.less';
 
 export default function Tip(props) {
     return (

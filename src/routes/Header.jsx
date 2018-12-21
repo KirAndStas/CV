@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-// import Tip from '../components/Tip';
+import { host, port, secret } from 'config/config.json'; // eslint-disable-line
+// import Tip from 'src/components/Tip';
 
 export default class Header extends React.Component {
     static propTypes = {
@@ -38,8 +39,8 @@ export default class Header extends React.Component {
     onCVLinkClick() {
         const typedKeyword = window.prompt('type your keyword here');
 
-        if (typedKeyword && typedKeyword === 'kiril + genesis') {
-            const win = window.open('http://localhost:9000/statics/cv_kiril_stas.pdf', '_blank'); // eslint-disable-line
+        if (typedKeyword && typedKeyword === secret) {
+            const win = window.open(`http://${host}:${port}/statics/cv_kiril_stas.pdf`, '_blank'); // eslint-disable-line
             win.focus();
         } else if (typeof typedKeyword === 'string' && typedKeyword !== 'keyword') {
             const error = window.confirm('Your keyword is wrong. Click OK, to try again.');

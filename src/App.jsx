@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './routes/Header';
-import Body from './routes/Body';
+import Header from 'src/routes/Header';
+import Body from 'src/routes/Body';
 
-import './index.less';
+import 'src/index.less';
 
 export default class App extends React.Component {
     state = {
