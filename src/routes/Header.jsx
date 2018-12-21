@@ -40,7 +40,7 @@ export default class Header extends React.Component {
         const typedKeyword = window.prompt('type your keyword here');
 
         if (typedKeyword && typedKeyword === secret) {
-            const win = window.open(`http://${host}:${port}/statics/cv_kiril_stas.pdf`, '_blank'); // eslint-disable-line
+            const win = window.open(`http://${host}:${port}/statics/kiril_stas_apply.pdf`, '_blank'); // eslint-disable-line
             win.focus();
         } else if (typeof typedKeyword === 'string' && typedKeyword !== 'keyword') {
             const error = window.confirm('Your keyword is wrong. Click OK, to try again.');
