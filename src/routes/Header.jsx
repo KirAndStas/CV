@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import { host, port, secret } from 'config/config.json'; // eslint-disable-line
+import { assetsUrl, secret } from 'config/config.json'; // eslint-disable-line
 // import Tip from 'src/components/Tip';
 
 export default class Header extends React.Component {
@@ -40,7 +40,7 @@ export default class Header extends React.Component {
         const typedKeyword = window.prompt('type your keyword here');
 
         if (typedKeyword && typedKeyword === secret) {
-            const win = window.open(`http://${host}:${port}/statics/kiril_stas_apply.pdf`, '_blank'); // eslint-disable-line
+            const win = window.open(`${assetsUrl}kiril_stas_apply.pdf`, '_blank'); // eslint-disable-line
             win.focus();
         } else if (typeof typedKeyword === 'string' && typedKeyword !== 'keyword') {
             const error = window.confirm('Your keyword is wrong. Click OK, to try again.');

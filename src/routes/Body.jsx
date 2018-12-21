@@ -15,7 +15,7 @@ export default function Body({ currentMode }) {
 
     return (
         <div className='body-wrapper'>
-            <img src={'http://localhost:9000/statics/' + imgTitles[currentMode] + '.gif'} />
+            <img src={assetsUrl + imgTitles[currentMode] + '.gif'} />
         </div>
     );
 }
