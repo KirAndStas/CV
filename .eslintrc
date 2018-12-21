@@ -9,6 +9,7 @@
     jsx-quotes : [ error ,  prefer-single ],
     no-unused-vars : 0,
     prefer-template: 1,
+    import/no-unresolved: 1,
     react/button-has-type: 0,
     react/jsx-no-comment-textnodes: 0,
     react/jsx-indent-props: [error, first],

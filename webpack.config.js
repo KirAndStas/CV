@@ -26,7 +26,11 @@ module.exports = {
         colors: true
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.less']
+        extensions: ['.js', '.jsx', '.less'],
+        alias: {
+            config: path.resolve(__dirname, 'config'),
+            src: path.resolve(__dirname, 'src')
+        }
     },
     module: {
         rules: [
