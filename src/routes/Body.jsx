@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import { assetsUrl } from 'config/config.json';
 
-const dayTitles = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sanday'];
+const dayTitles = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 const imgTitles = {
     mood: 'girl',
     day: '',
@@ -12,7 +12,7 @@ const imgTitles = {
 
 export default function Body({ currentMode }) {
     const currentDayNumber = moment().day();
-    imgTitles.day = dayTitles[currentDayNumber - 1];
+    imgTitles.day = dayTitles[currentDayNumber];
 
     return (
         <div className='body-wrapper'>
