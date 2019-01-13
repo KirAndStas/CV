@@ -6,7 +6,7 @@ import { assetsUrl } from 'config/config.json';
 
 const dayTitles = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 const imgTitles = {
-    mood: 'girl',
+    mood: 'fashion',
     day: '',
 };
 
