@@ -6,6 +6,7 @@ var express = require("express");
 var app = express();
 app.use('/statics/', express.static(__dirname + '/dist/statics'));
 app.use('/', express.static(__dirname + '/dist/builds'));
+app.use('/.well-known/pki-validation/', express.static(__dirname + '/dist/csr'));
 app.listen(port, host);
 
 console.log('Running server at ' + host + ':' + port + '/');
