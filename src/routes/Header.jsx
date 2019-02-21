@@ -8,7 +8,6 @@ export default class Header extends React.Component {
     static propTypes = {
         mode: PropTypes.string.isRequired,
         onModeChange: PropTypes.func.isRequired,
-        showCVAccessDialog: PropTypes.func.isRequired,
     };
 
     linksData = [
@@ -18,9 +17,9 @@ export default class Header extends React.Component {
         { title: 'mail', onClickHandler: () => this.copyEmailToClipboard() },
     ]
 
-    state = {
-        isTipShown: false,
-    }
+    // state = {
+    //     isTipShown: false,
+    // }
 
     // componentDidMount() {
     //     const modeTitleEl = document.getElementById('modeTitle');
@@ -71,15 +70,13 @@ export default class Header extends React.Component {
     }
 
     render() {
-        const { showCVAccessDialog, onModeChange, mode } = this.props;
-        const { isTipShown } = this.state;
+        const { onModeChange, mode } = this.props;
 
-        // { isTipShown && <Tip />}
         return (
             <div className='header-wrapper'>
                 <div>
                     <span>mode:</span>
-                    <button id='modeTitle' className='link-btn' onClick={() => onModeChange()}>{ mode }</button>
+                    <button id='modeTitle' className='link-btn' onClick={() => onModeChange(mode)}>{ mode }</button>
                 </div>
                 <div className='links'>
                     {

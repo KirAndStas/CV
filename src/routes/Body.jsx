@@ -16,7 +16,10 @@ export default function Body({ currentMode }) {
 
     return (
         <div className='body-wrapper'>
-            <img src={assetsUrl + imgTitles[currentMode] + '.gif'} />
+            {currentMode === '#песняНедели'
+                ? <a style={{ fontFamily: 'Ubuntu', fontSize: '50px', color: 'darkkhaki' }} href='https://www.youtube.com/watch?v=Uqvqbi7iZeA' target='_blank' rel='noopener noreferrer'>21 Savage - All My Friends</a>
+                : <img src={assetsUrl + imgTitles[currentMode] + '.gif'} />
+            }
         </div>
     );
 }
