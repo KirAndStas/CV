@@ -36,12 +36,12 @@ export default class Header extends React.Component {
     //     modeTitleEl.removeEventListener('mouseout', () => this.handleOnModeTitleMouseOver(), false);
     // }
 
-    onCVLinkClick() {
+    onCVLinkClick = () => {
         // const typedKeyword = window.prompt('type your keyword here');
         //
         // if (typedKeyword && typedKeyword === secret) {
-            const win = window.open(`${assetsUrl}public_cv.pdf`, '_blank'); // eslint-disable-line
-            win.focus();
+        const win = window.open(`${assetsUrl}public_cv.pdf`, '_blank'); // eslint-disable-line
+        win.focus();
         // } else if (typeof typedKeyword === 'string' && typedKeyword !== 'keyword') {
         //     const error = window.confirm('Your keyword is wrong. Click OK, to try again.');
         //     if (error) this.onCVLinkClick();
